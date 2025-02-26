@@ -937,7 +937,7 @@
             "var_smooth_cls_animal": false,
             "min_version": "5.16"
         },
-        "rus_animal_classifier_25/Swin_B": {
+        "rus_animal_classifier_25_swin_B": {
             "model_fname": "Swin_B.pt",
             "description": "This model distinguishes between 25 species native to the Russian Far East and Altai. The training data was collected partially by Institute of ecology and evolution A.N. Severtsov of Russian Academy Of Sciences, Saylyugemsky National Park, and includes examples from the Northeast Tiger and Leopard National Park dataset. The training data corpus comprises 73687 images. We used a 60/20/20 Train/Val/Test split. The model reached an overall f1-macro of 0.89 on the test set. Created by Nikolay Makarov in 2025",
             "developer": "Sberbank of Russia",

@@ -4895,7 +4895,6 @@ def distribute_individual_model_jsons(model_info_fpath):
         for model_id in all_models:
             model_dict = model_dicts[model_id]
             set_up_unkown_model(title = model_id, model_dict = model_dict, model_type = typ)
-
 # this function downloads a json with model info and tells the user is there is a new model
 def fetch_latest_model_info():
     # log

@@ -13,4 +13,5 @@ dependencies:
   - pytorch::torchvision=0.11.2
   - conda-forge::cudatoolkit=11.3
   - conda-forge::cudnn=8.1
-  - albumentations
+  - albumentations=2.0.2
+  # TODO: версия 2.0.2 не поддерживается в EcoAssist для питона 3.8.15
