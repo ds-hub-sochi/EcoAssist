@@ -865,25 +865,25 @@
             "var_smooth_cls_animal": false,
             "min_version": "5.16"
         },
-        "Sochi_hub classification": {
+        "rus_animal_classifier_21": {
             "model_fname": "classificator_sochi_v2.pt",
-            "description": "",
-            "developer": "AI",
+            "description": "classifier for 21 classes of animals from camera traps",
+            "developer": "Sberbank of Russia",
             "env": "pytorch",
             "type": "sochi-pt",
             "download_info": [
                 [
-                    "https://huggingface.co/Sveta/classificator_sochi/resolve/main/classificator_sochi_v2.pt?download=true",
+                    "https://huggingface.co/ai-forever/rus_animal_classifier/resolve/main/rus_animal_classifier_21/classificator_sochi_v2.pt?download=true",
                     "classificator_sochi_v2.pt"
                 ],
                 [
-                    "https://huggingface.co/Sveta/classificator_sochi/resolve/main/classes.csv?download=true",
+                    "https://huggingface.co/ai-forever/rus_animal_classifier/resolve/main/rus_animal_classifier_21/classes.csv?download=true",
                     "classes.csv"
                 ]
             ],
-            "license": "",
-            "total_download_size": "786 MB",
-            "info_url": "",
+            "license": "MIT",
+            "total_download_size": "749 MB",
+            "info_url": "https://github.com/ai-forever/biodiversity",
             "all_classes": [
                 "brown_bear",
                 "black_bear",
@@ -929,6 +929,88 @@
                 "сommon_raccoon_dog",
                 "hare",
                 "marmot"
+            ],
+            "var_cls_detec_thresh": "0.40",
+            "var_cls_detec_thresh_default": "0.40",
+            "var_cls_class_thresh": "0.50",
+            "var_cls_class_thresh_default": "0.50",
+            "var_smooth_cls_animal": false,
+            "min_version": "5.16"
+        },
+        "rus_animal_classifier_25/Swin_B": {
+            "model_fname": "Swin_B.pt",
+            "description": "This model distinguishes between 25 species native to the Russian Far East and Altai. The training data was collected partially by Institute of ecology and evolution A.N. Severtsov of Russian Academy Of Sciences, Saylyugemsky National Park, and includes examples from the Northeast Tiger and Leopard National Park dataset. The training data corpus comprises 73687 images. We used a 60/20/20 Train/Val/Test split. The model reached an overall f1-macro of 0.89 on the test set. Created by Nikolay Makarov in 2025",
+            "developer": "Sberbank of Russia",
+            "env": "pytorch-sochi",
+            "type": "sochi-pt-swinb1-25",
+            "download_info": [
+                [
+                    "https://huggingface.co/ai-forever/rus_animal_classifier/resolve/main/rus_animal_classifier_25/Swin_B.pt?download=true",
+                    "Swin_B.pt"
+                ],
+                [
+                    "https://huggingface.co/ai-forever/rus_animal_classifier/resolve/main/rus_animal_classifier_25/classes.csv?download=true",
+                    "classes.csv"
+                ]
+            ],
+            "license": "MIT",
+            "total_download_size": "332 MB",
+            "info_url": "https://github.com/ai-forever",
+            "all_classes": [
+                "Other_animal",
+                "Amur_forest_cat",
+                "Argali",
+                "Asian_badger",
+                "Brown_bear",
+                "Wolf",
+                "Black_bear",
+                "Raccoon_dog",
+                "Hare",
+                "Manchurian_wapiti",
+                "Snow_leopard",
+                "Wild_boar",
+                "Musk_deer",
+                "Ibex",
+                "Leopard",
+                "Fox",
+                "Manul",
+                "Wapiti",
+                "Sika_deer",
+                "Wolverine",
+                "Lynx",
+                "Roe_deer",
+                "Sable",
+                "Marmot",
+                "Tiger",
+                "Yellow_throated_marten"
+            ],
+            "selected_classes": [
+                "Other_animal",
+                "Amur_forest_cat",
+                "Argali",
+                "Asian_badger",
+                "Brown_bear",
+                "Wolf",
+                "Black_bear",
+                "Raccoon_dog",
+                "Hare",
+                "Manchurian_wapiti",
+                "Snow_leopard",
+                "Wild_boar",
+                "Musk_deer",
+                "Ibex",
+                "Leopard",
+                "Fox",
+                "Manul",
+                "Wapiti",
+                "Sika_deer",
+                "Wolverine",
+                "Lynx",
+                "Roe_deer",
+                "Sable",
+                "Marmot",
+                "Tiger",
+                "Yellow_throated_marten"
             ],
             "var_cls_detec_thresh": "0.40",
             "var_cls_detec_thresh_default": "0.40",
