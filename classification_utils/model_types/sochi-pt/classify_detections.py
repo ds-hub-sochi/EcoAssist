@@ -6,6 +6,7 @@
 #############################################
 import sys
 import logging
+import numpy as np
 import torch
 import pandas as pd
 import torch.nn.functional as F
@@ -89,7 +90,7 @@ def get_classification(PIL_crop):
     output = model(input_batch)
     probabilities = F.softmax(output, dim=1)
     probabilities_np = probabilities.cpu().detach().numpy()
-    classifications = [[classes.iloc[i].values[1], prob] for i, prob in enumerate(probabilities_np[0])]
+    classifications = [[str(classes.iloc[i].values[1]), float(prob)] for i, prob in enumerate(probabilities_np[0])]
     return classifications
 
 # Функция кропа

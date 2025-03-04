@@ -869,7 +869,7 @@
             "model_fname": "classificator_sochi_v2.pt",
             "description": "classifier for 21 classes of animals from camera traps",
             "developer": "Sberbank of Russia",
-            "env": "pytorch",
+            "env": "pytorch-sochi",
             "type": "sochi-pt",
             "download_info": [
                 [
