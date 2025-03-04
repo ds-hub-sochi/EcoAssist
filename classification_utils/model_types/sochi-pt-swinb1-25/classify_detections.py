@@ -6,6 +6,8 @@
 #############################################
 import sys
 import logging
+
+import numpy as np
 import torch
 import pandas as pd
 import torch.nn.functional as F
@@ -107,13 +109,17 @@ preprocess: A.Compose = A.Compose(
 
 
 def get_classification(PIL_crop):
-    input_tensor = preprocess(PIL_crop)
+    # Преобразуем PIL.Image в NumPy массив
+    image_np = np.array(PIL_crop)
+    # Передаём NumPy массив в preprocess
+    transformed = preprocess(image=image_np)
+    input_tensor = transformed["image"]
     input_batch = input_tensor.unsqueeze(0)
     input_batch = input_batch.to(device)
     output = model(input_batch)
     probabilities = F.softmax(output, dim=1)
     probabilities_np = probabilities.cpu().detach().numpy()
-    classifications = [[classes.iloc[i].values[1], prob] for i, prob in enumerate(probabilities_np[0])]
+    classifications = [[str(classes.iloc[i].values[0]), float(prob)] for i, prob in enumerate(probabilities_np[0])]
     return classifications
 
 # Функция кропа
